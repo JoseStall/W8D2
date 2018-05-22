@@ -1,5 +1,4 @@
 # Projet Javascript
-***
 
 projet réalisé par :
 
