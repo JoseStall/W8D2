@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+	</head>
+	<body>
+		<script>
+			function vowel_count() {
+				var voyelle = ['a','e','i','o','u','y'];
+				var string = prompt('Ecris une phrase');
+				var array = string.split('');
+				var nombre = 0;
+				for (var i = 0; i < array.length; i++) {
+					for (var p = 0; p < voyelle.length; p++) {
+						if (array[i] == voyelle[p]) {
+							nombre++;
+						}
+					}	
+				}
+				var add = ''
+				if (nombre>0) { add = 's'; }
+				alert('Il y a ' + nombre + ' voyelle' + add);
+				vowel_count();
+			}
+			vowel_count();
+		</script>
+	</body>
+</html>
