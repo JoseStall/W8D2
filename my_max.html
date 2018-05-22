@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My_max</title>
+</head>
+<body>
+
+	<script>
+		function compareNombres(a, b) {
+  return a - b;
+};
+function myMax(){			
+var array = [2, 8, 5,24,1,16,11 ]
+alert('voici la liste des chiffres: ' + array)
+var number = prompt('Ecrit un chiffre pour en rajouter un: ');
+array.push(parseInt(number));
+alert('voici la nouvelle array :' + array );
+alert('voic les nombres mis dans le bon ordre : ' + array.sort(compareNombres));
+alert("voici le nombre le plus grand : " + array[array.length - 1]);
+}
+myMax()
+
+
+	</script>
+	
+</body>
+</html>

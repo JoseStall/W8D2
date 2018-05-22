@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculatrice</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+	
+	<div class="container">
+		<h1>Calculatrice</h1>
+		<div class="row mb">
+			<input type="text" id="calc" class="form-control" disabled>
+		</div>
+		<div class="row mb">
+			<input type="button" id="7" class="col-sm-3 btn btn-primary" value="7"> 
+			<input type="button" id="8" class="col-sm-3 btn btn-primary" value="8">
+			<input type="button" id= "9" class="col-sm-3 btn btn-primary" value="9">
+			<input type="button" id= "10" class="col-sm-3 btn btn-primary" value="%">
+		</div>
+		<div class="row mb">
+			<input type="button" id= "4"class="col-sm-3 btn btn-primary" value="4">
+			<input type="button" id= "5" class="col-sm-3 btn btn-primary" value="5">	
+			<input type="button" id= "6" class="col-sm-3 btn btn-primary" value="6">	
+			<input type="button" id="14"class="col-sm-3 btn btn-primary" value="x">
+
+		</div>
+		<div class="row mb">
+			<input type="button" id= "1" class="col-sm-3 btn btn-primary" value="1">
+			<input type="button" id= "2" class="col-sm-3 btn btn-primary" value="2">
+			<input type="button" id= "3" class="col-sm-3 btn btn-primary" value="3">
+			<input type="button" id="13" class="col-sm-3 btn btn-primary" value="-">
+		</div>
+		<div class="row mb">
+			<input type="button" id= "0" class="col-sm-3 btn btn-primary" value="0">
+			<input type="button" id="12" class="col-sm-3 btn btn-primary" value="+">
+			<input type="button" id='11' class="col-sm-3 btn btn-primary" value="=">
+			<input type="button" id='15' class="col-sm-3 btn btn-primary" value="Clear">
+		</div>
+	</div>
+	<script>
+		function add(a,b){
+			return a + b ;
+		}
+		function substract(a,b){
+			return a - b ;
+		}
+		function multiply(a,b){
+			return a * b ;
+		}
+		function divide(a,b){
+			return a / b ;
+		}
+		var array = [];
+		var div = document.getElementById("calc");  
+
+		document.getElementById(1).onclick = function(){
+			array.push(1);
+			div.value = array.join('');
+		}
+		document.getElementById(2).onclick = function(){
+			array.push(2);
+			div.value = array.join('');
+		}
+		document.getElementById(3).onclick = function(){
+			array.push(3);
+			div.value = array.join('');
+		}
+		document.getElementById(4).onclick = function(){
+			array.push(4);
+			div.value = array.join('');
+		}
+		document.getElementById(5).onclick = function(){
+			array.push(5);
+			div.value = array.join('');
+		}
+		document.getElementById(6).onclick = function(){
+			array.push(6);
+			div.value = array.join('');
+		}
+		document.getElementById(7).onclick = function(){
+			array.push(7);
+			div.value = array.join('');
+		}
+		document.getElementById(8).onclick = function(){
+			array.push(8);
+			div.value = array.join('');
+		}
+		document.getElementById(9).onclick = function(){
+			array.push(9);
+			div.value = array.join('');
+		}
+		document.getElementById(10).onclick = function(){
+			array.push("/");
+			div.value = array.join('');
+		}
+		document.getElementById(12).onclick = function(){
+			array.push("+");
+			div.value = array.join('');
+		}
+		document.getElementById(13).onclick = function(){
+			array.push("-");
+			div.value = array.join('');
+		}
+		document.getElementById(14).onclick = function(){
+			array.push("*");
+			div.value = array.join('');
+		}
+		document.getElementById(11).onclick = function(){
+			var string = array.join("");
+			var result = eval(string);
+			array = [];
+			div.value = result;
+			array.push(result);
+
+		};
+		document.getElementById(15).onclick = function(){
+			array = [];
+			div.value = array;
+		};
+
+	</script>
+	<style>
+	.mb {
+		margin-bottom: 10px;
+	}
+
+	input {
+		text-align: right;
+	}
+</style>
+</body>
+</html>
